@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anti-Productivity Suite - Mundane Quote</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(160deg, #f2f2f2 0%, #e1e5f2 100%);
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+        color: #2f2f2f;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.92);
+        padding: 40px;
+        border-radius: 18px;
+        max-width: 560px;
+        width: min(90vw, 560px);
+        box-shadow: 0 20px 60px rgba(33, 33, 33, 0.15);
+        text-align: center;
+      }
+
+      h1 {
+        margin: 0 0 16px;
+        font-size: 28px;
+      }
+
+      p {
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      footer {
+        margin-top: 24px;
+        font-size: 12px;
+        color: #6b6b6b;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <h1>Your Mundane Motivation</h1>
+      <p id="quote">Loading unremarkable wisdom...</p>
+      <footer>(Parody) Anti-Productivity Suite delights in mediocrity.</footer>
+    </main>
+
+    <script>
+      (function () {
+        const mundaneQuotes = [
+          "Remember to stare out the window for at least seven minutes today.",
+          "A watched kettle eventually boils, so keep watching just to be sure.",
+          "Folding socks is the universe's way of teaching patience.",
+          "Consider reorganizing your paperclip collection alphabetically.",
+          "Sharpies smell nice, but maybe not for too long.",
+          "One more scroll won't hurt. Probably.",
+        ];
+
+        const quote = mundaneQuotes[Math.floor(Math.random() * mundaneQuotes.length)];
+        document.getElementById("quote").textContent = quote;
+      })();
+    </script>
+  </body>
+</html>
